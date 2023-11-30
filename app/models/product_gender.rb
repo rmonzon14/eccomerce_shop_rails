@@ -1,0 +1,2 @@
+class ProductGender < ApplicationRecord
+end
