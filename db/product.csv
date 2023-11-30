@@ -1,47 +1,11 @@
 ﻿product_id,product_name,resell_price,retail_price,description,released_date,is_used,color,image_path,brand_id,category_id,product_gender_id
-1,Nike Dunk Low Grey Fog,200.00,100.00,"Delivering a subtle two-tone colorway of the classic silhouette originally released in 1985 is the Nike Dunk Low 'Grey Fog'. The all-leather upper features a white base with contrasting overlays in a light grey shade. The Swoosh, laces, and woven Nike tongue tag are in the same neutral tone. Additional Nike branding is on the heel tab and padded sockliner. On the bottom is a standard rubber cupsole that pairs white sidewalls with a grey rubber outsole.",09/21/2021,FALSE,White/Grey Fog,,1,1,1
+1,Nike Dunk Low Grey Fog,200.00,100.00,"Delivering a subtle two-tone colorway of the classic silhouette originally released in 1985 is the Nike Dunk Low 'Grey Fog'. The all-leather upper features a white base with contrasting overlays in a light grey shade. The Swoosh, laces, and woven Nike tongue tag are in the same neutral tone. Additional Nike branding is on the heel tab and padded sockliner. On the bottom is a standard rubber cupsole that pairs white sidewalls with a grey rubber outsole.",2021-09-21,FALSE,White/Grey Fog,,1,1,1
 2,Jordan 4 Retro S Black Canvas,400.00,210.00,"The Air Jordan 4 Retro 'Black Canvas' blends a neutral color scheme with unique materials. The upper is crafted predominately black canvas, with a subtle suede hit on the toe piece. Traditional AJ4 details return, with black TPU molded wings and a visible Nike Air unit in the heel. A subtle red Flight script on the tongue patch adds a burst of constrast, set against grey on the Jumpman logo, eyelets and midsole.",2010-05-22,FALSE,Black/White/Fire Red/Light Steel Grey,,7,1,1
-3,The North Face x Online Ceramics Sherpa Attitude FZ Jacket,150.00,250.00,The North Face and Online Ceramics delivered their The North Face x Online Ceramics Sherpa Attitude FZ Jacket alongside 21 other collaborative items in April of 2022.,04/29/2022,TRUE,Brown,,9,2,3
-4,Fear of God Essentials New Era Exclusive 59Fifty Fitted Hat (FW21),150.00,65.00,,08/20/2021,FALSE,Green,,15,3,1
-5,New Balance 327 Moonbeam Outerspace,90.00,130.00,"The New Balance 327 Moonbeam Outerspace for women features a white and gray color scheme. The shoe features an upper that is constructed of a combination of suede and white leather with gray detailing. The shoe's upper has embroidered branding and a distinctive N emblem. The midsole is made of lightweight EVA foam for cushioning and shock absorption, while the rubber outsole delivers traction and grip.",02/01/2021,FALSE,Moonbeam/Outerspace,,3,1,2
-6,Jordan 1 Low Wolf Grey,100.00,260.00,"The women's Jordan 1 Low Wolf Grey (W) features a white leather upper with Wolf Grey Durabuck overlays and Swooshes. From there, a Jordan Wings logo on the heel and a translucent outsole adds the finishing touch. The women's Jordan 1 Low Wolf Grey (W) released in July of 2021 and retailed for $100.",07/20/2021,FALSE,White/Wolf Grey-Aluminum,,7,1,2
-7,Jordan 1 Retro High Spider-Man Origin Story,800.00,160.00,"If Spider-Man was a sneaker head, he probably would be rocking the Jordan 1 Retro High Spider-Man Origin Story. This AJ1 comes with a white upper plus red accents, black Nike ""Swoosh"", white midsole, and translucent sole. These sneakers released in December 2018 and retailed for $160. Cop some sneaker heat for your next Homecoming and grab these on StockX today.",12/14/2018,FALSE,Gym Red/Black-White-Photo Blue,,7,1,1
-8,The North Face 1996 Retro Nuptse 700 Fill Packable Jacket Recycled TNF Black,400.00,400.00,"This black The North Face 1996 Retro Nuptse Jacket takes the outerwear brand's classic, and potentially most popular design, and constructs it from 100% recycled fabric. Like the traditional Nuptse Jacket, the recycled version features 700 Fill-down, a stowable hood, and a water-repellent finish.",11/01/2022,FALSE,Recycled TNF Black,,9,2,3
-9,Crocs Classic Clog Lighting McQueen,170.00,60.00,"The Crocs Classic Clog Lightning McQueen is an official collaboration with Disney Pixar's Cars franchise. These Lightning McQueen Crocs pay homage to the movie's lead character, who is voiced by Owen Wilson. The Crocs look is loosely based on the Chevrolet Corvette C1, a racing car produced between 1953 and 1962.",04/27/2021,FALSE,Red/Multi,,8,1,3
-10,Gucci x Doraemon Bucket Hat Ebony/Beige,300,590,Please Note: Dust bag and box are not required for this accessory.,01/20/2024,FALSE,Ebon/Beige,,10,3,3
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
-,,,,,,,,,,,
+3,The North Face x Online Ceramics Sherpa Attitude FZ Jacket,150.00,250.00,The North Face and Online Ceramics delivered their The North Face x Online Ceramics Sherpa Attitude FZ Jacket alongside 21 other collaborative items in April of 2022.,2022-04-29,TRUE,Brown,,9,2,3
+4,Fear of God Essentials New Era Exclusive 59Fifty Fitted Hat (FW21),150.00,65.00,,2021-08-20,FALSE,Green,,15,3,1
+5,New Balance 327 Moonbeam Outerspace,90.00,130.00,"The New Balance 327 Moonbeam Outerspace for women features a white and gray color scheme. The shoe features an upper that is constructed of a combination of suede and white leather with gray detailing. The shoe's upper has embroidered branding and a distinctive N emblem. The midsole is made of lightweight EVA foam for cushioning and shock absorption, while the rubber outsole delivers traction and grip.",2021-02-01,FALSE,Moonbeam/Outerspace,,3,1,2
+6,Jordan 1 Low Wolf Grey,100.00,260.00,"The women's Jordan 1 Low Wolf Grey (W) features a white leather upper with Wolf Grey Durabuck overlays and Swooshes. From there, a Jordan Wings logo on the heel and a translucent outsole adds the finishing touch. The women's Jordan 1 Low Wolf Grey (W) released in July of 2021 and retailed for $100.",2021-07-20,FALSE,White/Wolf Grey-Aluminum,,7,1,2
+7,Jordan 1 Retro High Spider-Man Origin Story,800.00,160.00,"If Spider-Man was a sneaker head, he probably would be rocking the Jordan 1 Retro High Spider-Man Origin Story. This AJ1 comes with a white upper plus red accents, black Nike ""Swoosh"", white midsole, and translucent sole. These sneakers released in December 2018 and retailed for $160. Cop some sneaker heat for your next Homecoming and grab these on StockX today.",2018-12-14,FALSE,Gym Red/Black-White-Photo Blue,,7,1,1
+8,The North Face 1996 Retro Nuptse 700 Fill Packable Jacket Recycled TNF Black,400.00,400.00,"This black The North Face 1996 Retro Nuptse Jacket takes the outerwear brand's classic, and potentially most popular design, and constructs it from 100% recycled fabric. Like the traditional Nuptse Jacket, the recycled version features 700 Fill-down, a stowable hood, and a water-repellent finish.",2022-11-01,FALSE,Recycled TNF Black,,9,2,3
+9,Crocs Classic Clog Lighting McQueen,170.00,60.00,"The Crocs Classic Clog Lightning McQueen is an official collaboration with Disney Pixar's Cars franchise. These Lightning McQueen Crocs pay homage to the movie's lead character, who is voiced by Owen Wilson. The Crocs look is loosely based on the Chevrolet Corvette C1, a racing car produced between 1953 and 1962.",2021-04-27,FALSE,Red/Multi,,8,1,3
+10,Gucci x Doraemon Bucket Hat Ebony/Beige,300.00,590.00,Please Note: Dust bag and box are not required for this accessory.,2024-01-20,FALSE,Ebon/Beige,,10,3,3
