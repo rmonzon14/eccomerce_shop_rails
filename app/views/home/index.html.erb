@@ -1,3 +1,13 @@
+<section class="categories-section">
+    <div>
+        <ul>
+            <% @categories.each do |c| %>
+                <li><%= c.category_name %></li>
+            <% end %>
+        </ul>
+    </div>
+</section>
+
 <main id="home-main">
   <section class="collections-section">
       <p class="collections-p">Collections</p>
@@ -14,7 +24,7 @@
                       </div>
                   </div>
               <% end %>
-          <% end%>
+          <% end %>
       </div>
   </section>
 </main>

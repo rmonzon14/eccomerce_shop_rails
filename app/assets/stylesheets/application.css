@@ -48,6 +48,16 @@ body {
 }
 
 /* Home page styling */
+.categories-section {
+  background-color: rgb(236, 234, 238);
+}
+
+.categories-section div ul {
+  display: flex;
+  justify-content: center;
+  gap: 50px
+}
+
 #home-main {
   margin: 0 100px;
 }
