@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   # products page route
   resources 'products', only: %i[index show]
+
+  # categories page route
+  resources 'categories', only: %i[show]
 end
