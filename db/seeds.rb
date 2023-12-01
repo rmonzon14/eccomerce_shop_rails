@@ -30,7 +30,7 @@ category_data = CSV.parse(File.read(category_filepath), headers: true)
 product_gender_data = CSV.parse(File.read(product_gender_filepath), headers: true)
 product_data = CSV.parse(File.read(product_filepath), headers: true)
 size_data = CSV.parse(File.read(size_filepath), headers: true)
-product_size_array = CSV.parse(File.read(product_size_filepath), headers: true)
+product_size_data = CSV.parse(File.read(product_size_filepath), headers: true)
 
 # populate Brands table
 brand_data.each do |b|
@@ -96,8 +96,16 @@ size_data.each do |s|
   end
 end
 
+product_size_data.each do |ps|
+    ProductSize.create(
+      product_id: ps["product_id"],
+      size_id: ps["size_id"]
+    )
+end
+
 puts Brand.count
 puts Category.count
 puts ProductGender.count
 puts Product.count
 puts Size.count
+puts ProductSize.count
