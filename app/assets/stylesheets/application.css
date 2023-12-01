@@ -49,21 +49,30 @@ body {
 
 /* Home page styling */
 .categories-section {
-  background-color: rgb(236, 234, 238);
+  background-color: rgb(236, 236, 236);
+  padding: 10px;
+  margin-bottom: 70px;
 }
 
 .categories-section div ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 50px
+}
+
+.categories-section a {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.categories-section a:hover {
+  color: grey;
+  text-decoration: none;
 }
 
 #home-main {
   margin: 0 100px;
-}
-
-.collections-section {
-
 }
 
 .collections-p {

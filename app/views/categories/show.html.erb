@@ -1,2 +1,10 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<main>
+  <h2><%= @category.category_name %></h2>
+  <section>
+    <ul>
+      <% @category.products.each do |product| %>
+        <li><%= link_to product.product_name, product %></li>
+      <% end %>
+    </ul>
+  </section>
+</main>
