@@ -8,6 +8,14 @@ ProductGender.destroy_all
 Category.destroy_all
 Size.destroy_all
 
+# reset the id count to zero for all the tables mentioned below
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='brands';")
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='products';")
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='product_genders';")
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='categories';")
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='sizes';")
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='product_sizes';")
+
 # filepath for each csv files
 brand_filepath = Rails.root.join("db/brand.csv")
 category_filepath = Rails.root.join("db/category.csv")
@@ -78,10 +86,6 @@ product_data.each do |pd|
   end
 end
 
-puts ""
-puts ""
-puts ""
-puts ""
 puts Brand.count
 puts Category.count
 puts ProductGender.count
