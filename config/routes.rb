@@ -9,4 +9,7 @@ Rails.application.routes.draw do
 
   # categories page route
   resources 'categories', only: :show
+
+  # brands page route
+  resources 'brands', only: %i[index show]
 end

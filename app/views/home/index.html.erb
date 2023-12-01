@@ -27,4 +27,22 @@
           <% end %>
       </div>
   </section>
+
+  <section class="brands-section">
+    <p class="brands-p">Shop by Brands</p>
+      <div class="brands-column">
+          <% if @brands.empty? %>
+              <p>There are currently no brands available</p>
+          <% else %>
+              <% @brands.each do |brand| %>
+                  <div class="brands-row">
+                      <div class="image">d</div>
+                      <div class="brands-info">
+                        <%= link_to brand.brand_name, brand %>
+                      </div>
+                  </div>
+              <% end %>
+          <% end %>
+      </div>
+  </section>
 </main>

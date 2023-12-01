@@ -110,3 +110,24 @@ body {
   color: grey;
   text-decoration: none;
 }
+
+.brands-p {
+  font-weight: bold;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.brands-column {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 4fr);
+  gap: 20px;
+}
+
+.brands-row {
+  background-color: #ffffff;
+  border: solid rgb(230, 230, 230) 1px;
+  border-radius: 3px;
+  height: 250px;
+  position: relative;
+}
