@@ -1,2 +1,14 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<h1><%= @product.product_name %></h1>
+<p>Product Description: <%= @product.description %></p>
+<p>Price: <%= @product.resell_price %></p>
+<p>Original Price: <%= @product.retail_price %></p>
+<p>Released Date: <%= @product.released_date %></p>
+<p>Codition: <%= @product.is_used %></p>
+<p>Color: <%= @product.color %></p>
+
+<p>Available Sizes</p>
+<ul>
+  <% @sizes.each do |size| %>
+    <li><%= size.size %></li>
+  <% end %>
+</ul>

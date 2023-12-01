@@ -1,2 +1,18 @@
-<h1>Products#index</h1>
-<p>Find me in app/views/products/index.html.erb</p>
+<main id="products-main">
+    <p class="collections-p">For You!</p>
+    <div class="collection-column">
+        <% if @products.empty? %>
+            <p>There are currently no collections available</p>
+        <% else %>
+            <% @products.each do |product| %>
+                <div class="collection-row">
+                    <div class="image">d</div>
+                    <div class="collection-info">
+                          <%= link_to product.product_name, product %>
+                          <p>CAD $<%= product.resell_price %></p>
+                    </div>
+                </div>
+            <% end %>
+        <% end%>
+    </div>
+</main>
