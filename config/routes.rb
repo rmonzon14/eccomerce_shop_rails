@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'brands/index'
+  get 'brands/show'
   # Set default route to the home page
   root 'home#index'
 
