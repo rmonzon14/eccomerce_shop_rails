@@ -86,6 +86,7 @@ product_data.each do |pd|
   end
 end
 
+# populate Sizes table
 size_data.each do |s|
   size = Size.find_by(size: s["size"])
 
@@ -96,6 +97,7 @@ size_data.each do |s|
   end
 end
 
+# populate Product_Sizes table
 product_size_data.each do |ps|
     ProductSize.create(
       product_id: ps["product_id"],
