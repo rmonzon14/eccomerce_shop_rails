@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # Set default route to the home page
+  root 'home#index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources 'artists', only: %i[index show]
 end
