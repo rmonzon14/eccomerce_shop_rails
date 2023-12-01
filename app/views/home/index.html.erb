@@ -1,1 +1,20 @@
-
+<main id="home-main">
+  <section class="collections-section">
+      <p class="collections-p">Collections</p>
+      <div class="collection-column">
+          <% if @products.empty? %>
+              <p>There are currently no collections available</p>
+          <% else %>
+              <% @products.each do |product| %>
+                  <div class="collection-row">
+                      <div class="image">d</div>
+                      <div class="collection-info">
+                            <%= link_to product.product_name, root_path %>
+                            <p>CAD $<%= product.resell_price %></p>
+                      </div>
+                  </div>
+              <% end %>
+          <% end%>
+      </div>
+  </section>
+</main>

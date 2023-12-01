@@ -13,3 +13,81 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Resets */
+ * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  color: white;
+}
+
+/* Body */
+body {
+  margin: 100px 0;
+}
+
+/* _header */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(228, 224, 224);
+}
+
+/* Home page styling */
+#home-main {
+  margin: 0 100px;
+}
+
+.collections-section {
+
+}
+
+.collections-p {
+  font-weight: bold;
+  color: black;
+  font-size: 1.4rem;
+}
+
+.collection-column {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 4fr);
+  gap: 20px;
+}
+
+.collection-row {
+  background-color: #ffffff;
+  border: solid rgb(230, 230, 230) 1px;
+  border-radius: 3px;
+  height: 250px;
+  position: relative;
+}
+
+.image {
+  background-color: black;
+  width: 100%;
+  height: 200px;
+}
+
+.collection-info {
+  margin: 5px;
+}
+
+.collection-info a:hover {
+  color: grey;
+  text-decoration: none;
+}
