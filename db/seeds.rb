@@ -86,7 +86,18 @@ product_data.each do |pd|
   end
 end
 
+size_data.each do |s|
+  size = Size.find_by(size: s["size"])
+
+  unless size&.valid?
+    Size.create(
+      size: s["size"],
+    )
+  end
+end
+
 puts Brand.count
 puts Category.count
 puts ProductGender.count
 puts Product.count
+puts Size.count
