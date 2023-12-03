@@ -110,9 +110,4 @@ puts Category.count
 puts ProductGender.count
 puts Product.count
 puts Size.count
-puts ProductSize.count
-
-if Rails.env.development?
-  AdminUser.create!(email: 'redkmonzon@gmail.com', password: 'password', password_confirmation: 'password')
-end
-
+puts ProductSize.countAdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
