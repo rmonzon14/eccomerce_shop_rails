@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'brands/index'
-  get 'brands/show'
+
   # Set default route to the home page
   root 'home#index'
 
