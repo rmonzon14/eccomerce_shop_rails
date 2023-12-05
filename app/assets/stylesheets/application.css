@@ -132,5 +132,17 @@ body {
   background-color: #ffffff;
   border: solid rgb(230, 230, 230) 1px;
   border-radius: 3px;
+}
 
+.more {
+  text-align: center;
+  background-color: rgb(82, 82, 82);
+  margin: 0 auto;
+  width: 100px;
+  padding: 5px 10px;
+  margin-top: 20px;
+}
+
+.more a {
+  color: white;
 }

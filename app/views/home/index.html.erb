@@ -10,28 +10,30 @@
 
 <main id="home-main">
   <section class="collections-section">
-      <p class="collections-p">Collections</p>
-      <div class="collection-column">
-          <% if @products.empty? %>
-              <p>There are currently no collections available</p>
-          <% else %>
-              <% @products.each do |product| %>
-                  <div class="collection-row">
-                    <% if product.image.present? %>
-                        <div>
-                            <figure class="image">
-                                <%= image_tag product.image.variant(resize_to_limit: [200,200]) %>
-                            </figure>
-                        </div>
-                    <% end %>
-                        <div class="collection-info">
-                            <%= link_to product.product_name, product %>
-                            <p>CAD $<%= product.resell_price %></p>
-                        </div>
-                  </div>
-              <% end %>
-          <% end %>
-      </div>
+    <p class="collections-p">Collections</p>
+    <div class="collection-column">
+        <% if @products.empty? %>
+            <p>There are currently no collections available</p>
+        <% else %>
+            <% @products.each do |product| %>
+                <div class="collection-row">
+                <% if product.image.present? %>
+                    <div>
+                        <figure class="image">
+                            <%= image_tag product.image.variant(resize_to_limit: [200,200]) %>
+                        </figure>
+                    </div>
+                <% end %>
+                    <div class="collection-info">
+                        <%= link_to product.product_name, product %>
+                        <p>CAD $<%= product.resell_price %></p>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+
+    <p class="more"><%= link_to "Shop All", products_path %></p>
   </section>
 
   <section class="brands-section">
