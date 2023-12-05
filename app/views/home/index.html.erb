@@ -17,11 +17,17 @@
           <% else %>
               <% @products.each do |product| %>
                   <div class="collection-row">
-                      <div class="image">d</div>
-                      <div class="collection-info">
-                        <%= link_to product.product_name, product %>
-                        <p>CAD $<%= product.resell_price %></p>
-                      </div>
+                    <% if product.image.present? %>
+                        <div>
+                            <figure class="image">
+                                <%= image_tag product.image.variant(resize_to_limit: [200,200]) %>
+                            </figure>
+                        </div>
+                    <% end %>
+                        <div class="collection-info">
+                            <%= link_to product.product_name, product %>
+                            <p>CAD $<%= product.resell_price %></p>
+                        </div>
                   </div>
               <% end %>
           <% end %>

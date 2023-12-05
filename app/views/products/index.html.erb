@@ -6,7 +6,6 @@
         <% else %>
             <% @products.each do |product| %>
                 <div class="collection-row">
-                    <div class="image">d</div>
                     <div class="collection-info">
                           <%= link_to product.product_name, product %>
                           <p>CAD $<%= product.resell_price %></p>

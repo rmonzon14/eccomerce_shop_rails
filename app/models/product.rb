@@ -11,4 +11,5 @@ class Product < ApplicationRecord
   validates :product_name, :resell_price, :retail_price, :color, presence: true
   validates :is_used, inclusion: { in: [ true, false ] }
   validates :resell_price, :retail_price, numericality: { greater_than_or_equal_to: 0.01 }
+
 end
