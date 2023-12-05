@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -13,4 +14,6 @@ Rails.application.routes.draw do
 
   # brands page route
   resources 'brands', only: %i[index show]
+
+  resources "search", only: :index
 end
