@@ -30,7 +30,8 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: grey;
+  text-decoration: none;
 }
 
 /* Body */
@@ -70,11 +71,6 @@ body {
 .categories-section a {
   font-size: 1.2rem;
   font-weight: bold;
-}
-
-.categories-section a:hover {
-  color: grey;
-  text-decoration: none;
 }
 
 #home-main {
