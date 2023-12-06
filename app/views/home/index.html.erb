@@ -10,22 +10,22 @@
 
 <main id="home-main">
   <section class="collections-section">
-    <p class="collections-p">Collections</p>
+    <p class="section-h">Collections</p>
     <div class="collection-column">
         <% if @products.empty? %>
             <p>There are currently no collections available</p>
         <% else %>
             <% @products.each do |product| %>
-                <div class="collection-row">
-                <% if product.image.present? %>
-                    <div>
-                        <figure class="image">
-                            <%= image_tag product.image.variant(resize_to_limit: [200,200]) %>
-                        </figure>
-                    </div>
-                <% end %>
+                <div class="card collection-row">
+                    <% if product.image.present? %>
+                        <div>
+                            <figure class="collection-figure">
+                                <%= image_tag product.image.variant(resize_to_limit: [180,180]) %>
+                            </figure>
+                        </div>
+                    <% end %>
                     <div class="collection-info">
-                        <%= link_to product.product_name, product %>
+                        <%= link_to truncate(product.product_name, length: 28), product %>
                         <p>CAD $<%= product.resell_price %></p>
                     </div>
                 </div>
@@ -33,24 +33,32 @@
         <% end %>
     </div>
 
-    <p class="more"><%= link_to "Shop All", products_path %></p>
+    <p class="shop-all"><%= link_to "Shop All", products_path %></p>
   </section>
 
   <section class="brands-section">
-    <p class="brands-p">Shop by Brands</p>
-      <div class="brands-column">
-          <% if @brands.empty? %>
-              <p>There are currently no brands available</p>
-          <% else %>
-              <% @brands.each do |brand| %>
-                  <div class="brands-row">
-                      <div class="image">d</div>
-                      <div class="brands-info">
-                        <%= link_to brand.brand_name, brand %>
-                      </div>
-                  </div>
-              <% end %>
-          <% end %>
-      </div>
+    <p class="section-h">Shop by Brands</p>
+        <div class="brands-column">
+            <% if @brands.empty? %>
+                <p>There are currently no brands available</p>
+            <% else %>
+                <% @brands.each do |brand| %>
+                    <div class="brands-row">
+                            <div class="brands-info">
+                                <%= link_to brand.brand_name, brand %>
+                            </div>
+                            <% if brand.image.present? %>
+                                <div>
+                                    <figure class="brand-figure">
+                                        <%= image_tag brand.image.variant(resize_to_limit: [120,120]) %>
+                                    </figure>
+                                </div>
+                            <% end %>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+
+        <p class="browse-all"><%= link_to "Browse All", brands_path %></p>
   </section>
 </main>
