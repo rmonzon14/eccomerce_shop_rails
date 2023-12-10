@@ -40,18 +40,31 @@ body {
 }
 
 /* _header */
-#home-main {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 20px;
   z-index: 100;
-  background-color: rgb(228, 224, 224);
+  background-color: rgb(253, 252, 252);
+  box-shadow: 0 4px 6px -6px #aaaaaa;
+}
+
+.navbar-da {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.nav-input {
+  padding: 10px 100px;
+  border-style: none;
+  border-radius: 20px;
+  background-color: rgb(207, 206, 206);
+}
+
+.nav-dropdown {
+  background-color: #aaaaaa;
 }
 
 /* Home page styling */
@@ -59,6 +72,12 @@ body {
   border-top: solid grey 1px;
   padding: 10px;
   margin: 0 100px 70px;
+}
+#home-main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 0 100px;
 }
 
 .categories-section div ul {
@@ -70,10 +89,6 @@ body {
 
 .categories-section a {
   font-size: 1.3rem;
-}
-
-#home-main {
-  margin: 0 100px;
 }
 
 .section-h {

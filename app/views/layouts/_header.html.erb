@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to "Devine Apparel", root_path, class: "navbar-brand" %>
+<nav class="navbar navbar-expand-lg">
+  <%= link_to "Devine Apparel", root_path, class: "navbar-da" %>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     <%= form_with url: "/search", method: :get, class: "nav-form" do |form| %>
-      <%= form.select :category, ["All", "Sneakers", "Hats", "Clothes"], class: "nav-dropdown" %>
-      <%= form.text_field :q, class: "text-input", placeholder: "Search for sneakers, clothes, hats" %>
+      <%= form.select :category, ["All Categories", "Sneakers", "Hats", "Clothes"], class: "nav-dropdown" %>
+      <%= form.text_field :q, class: "nav-input", placeholder: "Search for sneakers, clothes, hats" %>
       <%= form.button "Search", class: "nav-search-btn", name: nil %>
     <% end %>
 
