@@ -46,12 +46,12 @@ body {
   width: 100%;
   padding: 20px;
   z-index: 100;
-  background-color: rgb(253, 252, 252);
-  box-shadow: 0 4px 6px -6px #aaaaaa;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px -6px #818080;
 }
 
 .navbar-da {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-right: 20px;
   font-weight: bold;
 }
@@ -60,11 +60,25 @@ body {
   padding: 10px 100px;
   border-style: none;
   border-radius: 20px;
-  background-color: rgb(207, 206, 206);
+  background-color: rgb(240, 236, 236);
 }
 
-.nav-dropdown {
-  background-color: #aaaaaa;
+#category {
+  padding: 5px 12px;
+  background-color: #bac3cb;
+  border-radius: 8px;
+}
+
+.nav-profile-section {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-search-btn {
+  padding: 5px 30px;
+  border-style: none;
+  border-radius: 12px;
+  background-color: #bac3cb;
 }
 
 /* Home page styling */
@@ -187,7 +201,7 @@ section a:hover {
   font-weight: bold;
   text-align: center;
   padding: 5px 0;
-  background-color: rgb(82, 82, 82);
+  background-color: #bac3cb
 }
 
 .brands-info a {

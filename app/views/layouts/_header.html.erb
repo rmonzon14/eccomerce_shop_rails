@@ -3,7 +3,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     <%= form_with url: "/search", method: :get, class: "nav-form" do |form| %>
-      <%= form.select :category, ["All Categories", "Sneakers", "Hats", "Clothes"], class: "nav-dropdown" %>
+      <%= form.select :category, ["All Categories", "Sneakers", "Hats", "Clothes"], class: "nav-dropdowndd" %>
       <%= form.text_field :q, class: "nav-input", placeholder: "Search for sneakers, clothes, hats" %>
       <%= form.button "Search", class: "nav-search-btn", name: nil %>
     <% end %>
@@ -17,5 +17,14 @@
       </li>
     </ul>
 
+  </div>
+
+  <div class="nav-profile-section">
+    <% if user_signed_in? %>
+      <p>Hi, <%= current_user.email.sub(/@.*/, '').capitalize %></p>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= button_to "Sign In", new_user_session_path %>
+    <% end %>
   </div>
 </nav>
