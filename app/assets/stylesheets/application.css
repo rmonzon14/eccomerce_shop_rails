@@ -74,6 +74,10 @@ body {
   gap: 10px;
 }
 
+.nav-profile-section p {
+  margin: auto 0;
+}
+
 .nav-search-btn {
   padding: 5px 30px;
   border-style: none;
