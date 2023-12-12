@@ -81,6 +81,17 @@ body {
   background-color: #bac3cb;
 }
 
+.nav-profile-section button {
+  padding: 5px 20px;
+  border-style: none;
+  background-color: #bac3cb;
+  border: solid rgb(145, 141, 141) 1px;
+}
+
+.navbar button:hover {
+  color: grey;
+}
+
 /* Home page styling */
 .categories-section {
   border-top: solid grey 1px;
