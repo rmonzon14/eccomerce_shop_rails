@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'user_info/show'
+  get 'user_info/create'
+  get 'user_info/update'
   devise_for :users
 
   devise_for :admin_users, ActiveAdmin::Devise.config
