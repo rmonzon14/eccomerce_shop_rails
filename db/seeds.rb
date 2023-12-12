@@ -7,6 +7,7 @@ Brand.destroy_all
 ProductGender.destroy_all
 Category.destroy_all
 Size.destroy_all
+Province.destroy_all
 
 # reset the id count to zero for all the tables mentioned below
 ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='brands';")
@@ -15,6 +16,7 @@ ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='p
 ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='categories';")
 ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='sizes';")
 ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='product_sizes';")
+ActiveRecord::Base.connection.execute("DELETE FROM sqlite_sequence WHERE name='provinces';")
 
 # filepath for each csv files
 brand_filepath = Rails.root.join("db/brand.csv")
@@ -23,6 +25,7 @@ product_gender_filepath = Rails.root.join("db/product_gender.csv")
 product_filepath = Rails.root.join("db/product.csv")
 size_filepath = Rails.root.join("db/size.csv")
 product_size_filepath = Rails.root.join("db/product_size.csv")
+province_filepath = Rails.root.join("db/province.csv")
 
 # parse csv files to 2d array
 brand_data = CSV.parse(File.read(brand_filepath), headers: true)
@@ -31,6 +34,7 @@ product_gender_data = CSV.parse(File.read(product_gender_filepath), headers: tru
 product_data = CSV.parse(File.read(product_filepath), headers: true)
 size_data = CSV.parse(File.read(size_filepath), headers: true)
 product_size_data = CSV.parse(File.read(product_size_filepath), headers: true)
+province_data = CSV.parse(File.read(province_filepath), headers: true)
 
 # populate Brands table
 brand_data.each do |b|
@@ -105,9 +109,27 @@ product_size_data.each do |ps|
     )
 end
 
+# populate Provinces table
+province_data.each do |p|
+  province = Province.find_by(province_name: p["province_name"])
+
+  unless province&.valid?
+    Province.create(
+      province_name: p["province_name"],
+      PST: p["PST"],
+      GST: p["GST"],
+      HST: p["HST"],
+      tax_type: p["tax_type"]
+    )
+  end
+  puts p["province_name"]
+end
+
 puts Brand.count
 puts Category.count
 puts ProductGender.count
 puts Product.count
 puts Size.count
-puts ProductSize.countAdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+puts Province.count
+puts ProductSize.count
+# AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

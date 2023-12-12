@@ -1,0 +1,14 @@
+﻿province_id,province_name,PST,GST,HST,tax_type
+1,Alberta,0.00,0.05,0.05,GST
+2,British Columbia,0.07,0.05,0.12,GST + PST
+3,Manitoba,0.07,0.05,0.12,GST + PST
+4,New Brunswick,0.10,0.05,0.15,HST
+5,Newfoundland and Labrador,0.10,0.05,0.15,HST
+6,Northwest Territories,0.00,0.05,0.05,GST
+7,Nova Scotia,0.10,0.05,0.15,HST
+8,Nunavut,0.00,0.05,0.05,GST
+9,Ontario,0.08,0.05,0.13,HST
+10,Prince Edward Island,0.10,0.05,0.15,HST
+11,Quebec,0.10,0.05,0.15,GST + QST
+12,Saskatchewan,0.06,0.05,0.11,GST + PST
+13,Yukon,0.00,0.05,0.05,GST
