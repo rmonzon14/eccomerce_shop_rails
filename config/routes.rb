@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'user_info/show'
-  get 'user_info/create'
-  get 'user_info/update'
+
+  # Devise route
   devise_for :users
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -19,5 +18,12 @@ Rails.application.routes.draw do
   # brands page route
   resources 'brands', only: %i[index show]
 
+  # Search page route
   resources "search", only: :index
+
+  # user_infos route
+  #get 'user_info/show'
+  #get 'user_info/create'
+  #get 'user_info/update'
+  resources "user_info", only: %i[show create update]
 end
