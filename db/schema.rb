@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_12_192028) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_13_082321) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -133,7 +133,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_12_192028) do
     t.string "street"
     t.string "postal_code"
     t.string "city"
-    t.string "phone_numberinteger"
+    t.string "phone_number"
     t.integer "user_id", null: false
     t.integer "province_id", null: false
     t.datetime "created_at", null: false

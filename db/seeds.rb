@@ -122,7 +122,6 @@ province_data.each do |p|
       tax_type: p["tax_type"]
     )
   end
-  puts p["province_name"]
 end
 
 puts Brand.count

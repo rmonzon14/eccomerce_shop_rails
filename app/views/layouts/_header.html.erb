@@ -21,8 +21,10 @@
 
   <div class="nav-profile-section">
     <% if user_signed_in? %>
-      <p>Hi, <%= current_user.email.sub(/@.*/, '').capitalize %></p>
-      <%= link_to "Profile",  user_info_path(current_user.id) %>
+      <p>Hi, <%= current_user.email.sub(/@.*/, '').capitalize %>!</p>
+      <%= link_to user_info_path(current_user.id) do %>
+        <%= image_tag(asset_path('profile_icon.png'), alt: 'profile_icon') %>
+      <% end %>
       <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
     <% else %>
       <%= button_to "Sign In", new_user_session_path %>

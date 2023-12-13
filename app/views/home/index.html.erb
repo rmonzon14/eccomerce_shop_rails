@@ -1,3 +1,9 @@
+<% if flash[:error] %>
+  <div class="alert alert-success">
+    <%= flash[:error] %>
+  </div>
+<% end %>
+
 <section class="categories-section">
     <div>
         <ul>
@@ -44,16 +50,16 @@
             <% else %>
                 <% @brands.each do |brand| %>
                     <div class="brands-row">
-                            <div class="brands-info">
-                                <%= link_to brand.brand_name, brand %>
+                        <div class="brands-info">
+                            <%= link_to brand.brand_name, brand %>
+                        </div>
+                        <% if brand.image.present? %>
+                            <div>
+                                <figure class="brand-figure">
+                                    <%= image_tag brand.image.variant(resize_to_limit: [120,120]) %>
+                                </figure>
                             </div>
-                            <% if brand.image.present? %>
-                                <div>
-                                    <figure class="brand-figure">
-                                        <%= image_tag brand.image.variant(resize_to_limit: [120,120]) %>
-                                    </figure>
-                                </div>
-                            <% end %>
+                        <% end %>
                     </div>
                 <% end %>
             <% end %>

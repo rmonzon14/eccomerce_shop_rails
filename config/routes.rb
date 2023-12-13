@@ -22,8 +22,7 @@ Rails.application.routes.draw do
   resources "search", only: :index
 
   # user_infos route
-  #get 'user_info/show'
-  #get 'user_info/create'
-  #get 'user_info/update'
-  resources "user_info", only: %i[show create update]
+  get "user_infos/new", to: "user_infos#new", as: "new_user_info"
+  get "user_infos/:id", to: "user_infos#show", as: "user_info"
+  post 'user_infos', to: 'user_infos#create'
 end
