@@ -30,4 +30,11 @@ Rails.application.routes.draw do
   post 'user_infos', to: 'user_infos#create'
   patch 'user_infos/:id', to: 'user_infos#update'
 
+  # stripe route scope
+  scope "/checkout" do
+    post "create", to: "checkout#create", as: "checkout_create"
+    get "success", to: "checkout#success", as: "checkout_success"
+    get "cancel", to: "checkout#cancel", as: "checkout_cancel"
+  end
+
 end
