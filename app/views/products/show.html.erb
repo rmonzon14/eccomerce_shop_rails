@@ -6,9 +6,11 @@
 <p>Codition: <%= @product.is_used %></p>
 <p>Color: <%= @product.color %></p>
 
-<p>Available Sizes</p>
-<ul>
-  <% @sizes.each do |size| %>
-    <li><%= size.available_size %></li>
-  <% end %>
-</ul>
+<%= form_with url: cart_index_path, method: :post do |form| %>
+  <div>
+    <%= form.label :size_id, "Available Sizes:" %>
+    <%= form.collection_select :size_id, @sizes, :id, :available_size, id: "size" %>
+  </div>
+
+  <%= form.submit "Add to cart" %>
+<% end %>

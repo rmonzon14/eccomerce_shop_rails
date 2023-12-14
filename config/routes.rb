@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'cart/show'
-
   # Devise route
   devise_for :users
 
@@ -12,6 +10,9 @@ Rails.application.routes.draw do
 
   # products page route
   resources 'products', only: %i[index show]
+
+  # cart page route
+  resources "cart", only: %i[show create index destroy]
 
   # categories page route
   resources 'categories', only: :show
@@ -28,4 +29,5 @@ Rails.application.routes.draw do
   get "user_infos/:id/edit", to: "user_infos#edit", as: "edit_user_info"
   post 'user_infos', to: 'user_infos#create'
   patch 'user_infos/:id', to: 'user_infos#update'
+
 end

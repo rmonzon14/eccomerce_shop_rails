@@ -1,0 +1,9 @@
+<h1>Your Cart</h1>
+<% if @cart_items.nil? %>
+  <p>You have no items in your cart</p>
+<% else %>
+  <% @cart_items.each do |item| %>
+    <p><%= ProductSize.joins(:product, :size).find(item).product.product_name %></p>
+    <%= button_to "Remove", cart_path(item), method: :delete %>
+  <% end %>
+<% end %>
