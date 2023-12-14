@@ -20,5 +20,7 @@
       <p>Address: <%= @current_user_info.street %></p>
       <p>Postal Code: <%= @current_user_info.postal_code %></p>
     </div>
+
+    <%= link_to "Edit", edit_user_info_path %>
   <% end %>
 </main>

@@ -1,6 +1,6 @@
 class UserInfosController < ApplicationController
   def show
-    @current_user_info = UserInfo.find_by(user_id: params[:id])
+    @current_user_info = UserInfo.find_by(user_id: current_user.id)
 
   end
 
@@ -20,7 +20,23 @@ class UserInfosController < ApplicationController
     end
   end
 
+  def edit
+    @user_info = UserInfo.find_by(user_id: current_user.id)
+    @province = Province.all
+  end
+
   def update
+    @user_info = UserInfo.find_by(user_id: current_user.id)
+
+    puts "DEBUG: #{@user_info.inspect}"
+
+    if @user_info.update(user_info_params)
+      flash[:success] = "New profile information saved!"
+      redirect_to @user_info
+    else
+      flash.now[:error] = "Can't save profile information!"
+      render :edit
+    end
 
   end
 
