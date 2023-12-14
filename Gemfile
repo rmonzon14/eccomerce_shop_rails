@@ -44,7 +44,7 @@ gem "bootsnap", require: false
 
 gem 'activeadmin', '2.11'
 gem 'devise'
-
+gem "stripe"
 # Use Sass to process CSS
 gem "sassc-rails"
 
