@@ -13,13 +13,11 @@ class UserInfosController < ApplicationController
     @user_info = UserInfo.new(user_info_params.merge(user_id: current_user.id))
 
     if @user_info.save
-      flash[:success] = "New info successfully added!"
+      flash[:success] = "You've successfully added your information!"
       redirect_to @user_info
     else
-      flash[:error] = @user_info.inspect
-      redirect_to root_path
+      flash[:error] = "Could not save information"
     end
-
   end
 
   def update

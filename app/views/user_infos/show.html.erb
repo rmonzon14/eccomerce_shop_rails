@@ -1,14 +1,24 @@
-<% if flash[:success] %>
-  <div class="alert alert-success">
-    <%= flash[:success] %>
-  </div>
-<% end %>
-
 <main>
   <% if @current_user_info.nil?  %>
-    <%= link_to "New", new_user_info_path %>
+    <h1>No Profile Information Found</h1>
+    <%= link_to "Setup profile", new_user_info_path %>
   <% else %>
-    <h1>Profile <%= @current_user_info.inspect %></h1>
-    <p>Personal Information Below</p>
+    <h1>Profile</h1>
+
+    <div>
+      <p class="profile-headers">Personal Information</p>
+
+      <p>Name: <%= "#{@current_user_info.first_name}  #{@current_user_info.last_name}" %></p>
+      <p>Phone Number: <%= @current_user_info.phone_number %></p>
+      <p>Email: <%= @current_user_info.user.email %></p>
+    </div>
+
+    <div>
+      <p class="profile-headers">Shipping Information</p>
+      <p>City: <%= @current_user_info.city %></p>
+      <p>Province: <%= @current_user_info.province.province_name %></p>
+      <p>Address: <%= @current_user_info.street %></p>
+      <p>Postal Code: <%= @current_user_info.postal_code %></p>
+    </div>
   <% end %>
 </main>
