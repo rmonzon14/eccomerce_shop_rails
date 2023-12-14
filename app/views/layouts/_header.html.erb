@@ -26,6 +26,9 @@
         <%= image_tag(asset_path('profile_icon.png'), alt: 'profile_icon') %>
       <% end %>
       <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+      <%= link_to cart_index_path do %>
+        <%= image_tag(asset_path('cart.png'), alt: 'cart_icon') %>
+      <% end %>
     <% else %>
       <%= button_to "Sign In", new_user_session_path %>
     <% end %>
