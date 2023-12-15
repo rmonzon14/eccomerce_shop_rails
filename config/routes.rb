@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'order_detail/index'
+  get 'order_detail/show'
   # Devise route
   devise_for :users
 
