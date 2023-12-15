@@ -8,29 +8,33 @@
   </div>
 <% end %>
 
-<main>
+<main id="profile-main">
   <% if @current_user_info.nil?  %>
     <h1>No Profile Information Found</h1>
-    <%= link_to "Setup profile", new_user_info_path %>
+
+    <div class="setup-btn-container">
+      <%= link_to "Setup profile", new_user_info_path, class: "setup-profile-btn" %>
+    </div>
   <% else %>
-    <h1>Profile</h1>
+    <h1>Your Profile Information</h1>
 
-    <div>
+    <div class="profile-container">
       <p class="profile-headers">Personal Information</p>
-
-      <p>Name: <%= "#{@current_user_info.first_name}  #{@current_user_info.last_name}" %></p>
-      <p>Phone Number: <%= @current_user_info.phone_number %></p>
-      <p>Email: <%= @current_user_info.user.email %></p>
+      <p><b>Name:</b> <%= "#{@current_user_info.first_name}  #{@current_user_info.last_name}" %></p>
+      <p><b>Phone Number:</b> <%= @current_user_info.phone_number %></p>
+      <p><b>Email:</b> <%= @current_user_info.user.email %></p>
     </div>
 
-    <div>
+    <div class="profile-container">
       <p class="profile-headers">Shipping Information</p>
-      <p>City: <%= @current_user_info.city %></p>
-      <p>Province: <%= @current_user_info.province.province_name %></p>
-      <p>Address: <%= @current_user_info.street %></p>
-      <p>Postal Code: <%= @current_user_info.postal_code %></p>
+      <p><b>City:</b> <%= @current_user_info.city %></p>
+      <p><b>Province:</b> <%= @current_user_info.province.province_name %></p>
+      <p><b>Address:</b> <%= @current_user_info.street %></p>
+      <p><b>Postal Code:</b> <%= @current_user_info.postal_code %></p>
     </div>
 
-    <%= link_to "Edit", edit_user_info_path %>
+    <div class="edit-btn-container">
+      <%= link_to "Edit", edit_user_info_path, class: "edit-profile-btn" %>
+    </div>
   <% end %>
 </main>

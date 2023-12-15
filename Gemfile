@@ -47,7 +47,8 @@ gem 'devise'
 gem "stripe"
 # Use Sass to process CSS
 gem "sassc-rails"
-
+gem "sinatra", "~>3.1"
+gem "thin"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
@@ -75,5 +76,10 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-
+  gem "rack-test"
+  gem "rest-client"
+  gem "rspec"
+  gem "rspec_junit_formatter"
+  gem "rspec-retry"
+  gem "rubysl-securerandom"
 end

@@ -1,11 +1,22 @@
-<h1>Your Cart</h1>
-<% if @cart_items.empty? %>
-  <p>You have no items in your cart</p>
-<% else %>
-  <% @cart_items.each do |item| %>
-    <p><%= ProductSize.joins(:product, :size).find(item).product.product_name %></p>
-    <%= button_to "Remove", cart_path(item), method: :delete %>
-  <% end %>
+<main id="cart-main">
+  <h1>Your Cart</h1>
 
-  <%= button_to "Checkout", checkout_create_path, method: :post, form: {data: {turbo: "false"}}, remote: true %>
-<% end %>
+  <div class="cart-container">
+    <% if @cart_items.empty? %>
+      <p>You have no items in your cart</p>
+      <%= link_to "Start Shopping", root_path, class: "start-shopping" %>
+    <% else %>
+      <% @cart_items.each do |item| %>
+        <div class="cart-item">
+          <figure>
+              <%= image_tag ProductSize.joins(:product, :size).find(item).product.image.variant(resize_to_limit: [90,90]), alt: "img" %>
+          </figure>
+          <p><%= ProductSize.joins(:product, :size).find(item).product.product_name %></p>
+          <%= button_to "Remove", cart_path(item), method: :delete %>
+        </div>
+      <% end %>
+
+      <%= button_to "Checkout", checkout_create_path, method: :post, form: {data: {turbo: "false"}}, remote: true %>
+    <% end %>
+  </div>
+</main>

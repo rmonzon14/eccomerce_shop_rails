@@ -1,3 +1,7 @@
+<header>
+    <%= image_tag(asset_path('background_header.png'), alt: 'cart_icon') %>
+</header>
+
 <section class="categories-section">
     <div>
         <ul>
@@ -20,7 +24,7 @@
                     <% if product.image.present? %>
                         <div>
                             <figure class="collection-figure">
-                                <%= image_tag product.image.variant(resize_to_limit: [180,180]) %>
+                                <%= image_tag product.image.variant(resize_to_limit: [180,180]), alt: "img" %>
                             </figure>
                         </div>
                     <% end %>
@@ -50,7 +54,7 @@
                         <% if brand.image.present? %>
                             <div>
                                 <figure class="brand-figure">
-                                    <%= image_tag brand.image.variant(resize_to_limit: [120,120]) %>
+                                    <%= image_tag brand.image.variant(resize_to_limit: [120,120]), alt: "img" %>
                                 </figure>
                             </div>
                         <% end %>

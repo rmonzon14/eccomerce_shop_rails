@@ -28,7 +28,7 @@ class CheckoutController < ApplicationController
 
     product_li_format<< {
       :price_data =>{ :currency => "cad",
-      :product_data => {:name => "Total Taxes", :description => "GST(#{province.GST}) + HST(#{province.HST})  + PST(#{province.PST}) "},
+      :product_data => {:name => "Total Taxes", :description => "GST(#{province.GST}) + HST(#{province.HST})  + PST(#{province.PST})"},
       :unit_amount => ((calculate_total_tax(province.PST, province.GST, province.HST, subtotal)) * 100).to_i },
       :quantity => 1
     }

@@ -1,18 +1,25 @@
 <main id="products-main">
-    <p class="collections-p">For You!</p>
+    <p class="section-h">For you!</p>
     <div class="collection-column">
         <% if @products.empty? %>
             <p>There are currently no collections available</p>
         <% else %>
             <% @products.each do |product| %>
-                <div class="collection-row">
+                <div class="card collection-row">
+                    <% if product.image.present? %>
+                        <div>
+                            <figure class="collection-figure">
+                                <%= image_tag product.image.variant(resize_to_limit: [180,180]), alt: "img" %>
+                            </figure>
+                        </div>
+                    <% end %>
                     <div class="collection-info">
-                          <%= link_to product.product_name, product %>
-                          <p>CAD $<%= product.resell_price %></p>
+                        <%= link_to truncate(product.product_name, length: 28), product %>
+                        <p>CAD $<%= product.resell_price %></p>
                     </div>
                 </div>
             <% end %>
-        <% end%>
+        <% end %>
     </div>
     <%= paginate @products %>
 </main>

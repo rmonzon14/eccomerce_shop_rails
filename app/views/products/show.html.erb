@@ -1,16 +1,30 @@
-<h1><%= @product.product_name %></h1>
-<p>Product Description: <%= @product.description %></p>
-<p>Price: <%= @product.resell_price %></p>
-<p>Original Price: <%= @product.retail_price %></p>
-<p>Released Date: <%= @product.released_date %></p>
-<p>Codition: <%= @product.is_used %></p>
-<p>Color: <%= @product.color %></p>
+<main id="product-main">
+ <% if @product.image.present? %>
+    <div class="image-container">
+        <figure class="collection-figure">
+            <%= image_tag @product.image.variant(resize_to_limit: [300,400]) %>
+        </figure>
+    </div>
+  <% end %>
 
-<%= form_with url: cart_index_path, method: :post do |form| %>
-  <div>
-    <%= form.label :size_id, "Available Sizes:" %>
-    <%= form.collection_select :size_id, @sizes, :id, :available_size, id: "size" %>
+  <div class="product-content-container">
+    <h1><%= @product.product_name %></h1>
+    <p><%= @product.description %></p>
+    <p><b>Price:</b> $<%= @product.resell_price %></p>
+    <p><b>Original Price:</b> $<%= @product.retail_price %></p>
+    <p><b>Released Date:</b> <%= @product.released_date %></p>
+    <% if @product.is_used  %>
+      <p><b>Codition:</b> Used</p>
+    <% else %>
+      <p><b>Codition:</b> Brand New</p>
+    <% end %>
+
+    <%= form_with url: cart_index_path, method: :post do |form| %>
+      <div>
+        <%= form.label :size_id, "Available Sizes:" %>
+        <%= form.collection_select :size_id, @sizes, :id, :available_size, id: "size" %>
+      </div>
+      <%= form.submit "Add to cart", class: "cart-btn" %>
+    <% end %>
   </div>
-
-  <%= form.submit "Add to cart" %>
-<% end %>
+</main>
