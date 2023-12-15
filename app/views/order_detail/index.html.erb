@@ -1,2 +1,11 @@
-<h1>OrderDetail#index</h1>
-<p>Find me in app/views/order_detail/index.html.erb</p>
+<main>
+  <h1>You past orders</h1>
+  <% @order_details.each do |order| %>
+    <div>
+      <p>Order Id:<%= order.checkout_id %></p>
+      <p>Total:<%= order.grand_total %></p>
+      <p>Date Ordered:<%= order.order_date %></p>
+    </div>
+    <%= link_to "View", order %>
+  <% end %>
+</main>

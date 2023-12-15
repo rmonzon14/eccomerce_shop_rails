@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'order_detail/index'
-  get 'order_detail/show'
   # Devise route
   devise_for :users
 
@@ -39,4 +37,6 @@ Rails.application.routes.draw do
     get "cancel", to: "checkout#cancel", as: "checkout_cancel"
   end
 
+  # Order details page route
+  resources 'order_detail', only: %i[index show]
 end

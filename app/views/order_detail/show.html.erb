@@ -1,2 +1,9 @@
-<h1>OrderDetail#show</h1>
-<p>Find me in app/views/order_detail/show.html.erb</p>
+<main>
+  <h1>Products Ordered</h1>
+  <div>
+    <% @ordered_products.each do |product| %>
+      <p><% product.product_name %></p>
+      <%= link_to product.product_name, product %>
+    <% end %>
+  </div>
+</main>
