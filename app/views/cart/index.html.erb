@@ -6,4 +6,6 @@
     <p><%= ProductSize.joins(:product, :size).find(item).product.product_name %></p>
     <%= button_to "Remove", cart_path(item), method: :delete %>
   <% end %>
+
+  <%= button_to "Checkout", checkout_create_path, method: :post, form: {data: {turbo: "false"}}, remote: true %>
 <% end %>

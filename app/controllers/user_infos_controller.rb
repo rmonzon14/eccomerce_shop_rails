@@ -1,7 +1,7 @@
 class UserInfosController < ApplicationController
   def show
     @current_user_info = UserInfo.find_by(user_id: current_user.id)
-
+    puts @current_user_info.inspect
   end
 
   def new
@@ -14,6 +14,7 @@ class UserInfosController < ApplicationController
 
     if @user_info.save
       flash[:success] = "You've successfully added your information!"
+      puts @user_info
       redirect_to @user_info
     else
       flash[:error] = "Could not save information"
