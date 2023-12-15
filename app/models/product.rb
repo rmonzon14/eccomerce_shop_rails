@@ -4,6 +4,8 @@ class Product < ApplicationRecord
   belongs_to :category
   has_many :sizes, through: :product_sizes
   has_many :product_sizes
+  has_many :order_details, through: :order_products
+  has_many :order_products
 
   # Set up image mapping
   has_one_attached :image
